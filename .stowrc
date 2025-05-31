@@ -1,0 +1,5 @@
+// Stow command target
+--target=~
+--ignore=DS_Store
+--ignore=.git
+--ignore-.gitignore
