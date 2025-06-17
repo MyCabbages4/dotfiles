@@ -22,6 +22,7 @@ vim.cmd("set softtabstop=4")
 vim.cmd("set expandtab")
 vim.cmd("set shiftwidth=4")
 vim.wo.number = true
+vim.diagnostic.config({ virtual_text = true })
 
 -- LSP?? --
 --require 'lspconfig'.clangd.setup{}
