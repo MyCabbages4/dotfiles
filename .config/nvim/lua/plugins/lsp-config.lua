@@ -14,12 +14,11 @@ return{{
     {
         "neovim/nvim-lspconfig",
         config = function()
-            local lspconfig = require("lspconfig")
             local capibilities = require('cmp_nvim_lsp').default_capabilities()
-            lspconfig.lua_ls.setup({capibilities = capibilities})
-            lspconfig.clangd.setup({capibilities = capibilities})
-            lspconfig.pylsp.setup({capibilities = capibilities})
-            lspconfig.gopls.setup({capibilities = capibilities})
+            vim.lsp.config('lua_ls', {capibilities = capibilities})
+            vim.lsp.config('clangd', {capibilities = capibilities})
+            vim.lsp.config('pylsp', {capibilities = capibilities})
+            vim.lsp.config('gopls', {capibilities = capibilities})
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
         end
     },
