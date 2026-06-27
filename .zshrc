@@ -82,11 +82,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -106,4 +106,7 @@ source $ZSH/oh-my-zsh.sh
 eval "$(atuin init zsh --disable-up-arrow)"
 
 export CPLUS_INCLUDE_PATH=/usr/include/boost:$CPLUS_INCLUDE_PATH
-# export LIBRARY_PATH=
+
+if [ "$TERM" = "xterm-kitty" ]; then
+    alias ssh="kitty +kitten ssh"
+fi
