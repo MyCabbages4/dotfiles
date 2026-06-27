@@ -102,3 +102,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+eval "$(atuin init zsh --disable-up-arrow)"
+
+export CPLUS_INCLUDE_PATH=/usr/include/boost:$CPLUS_INCLUDE_PATH
+# export LIBRARY_PATH=

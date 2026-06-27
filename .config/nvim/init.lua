@@ -13,8 +13,12 @@ local map = vim.api.nvim_set_keymap
 --      term_mode = "t"`
 --      command_mode = "c"
 
+-- vim.g.vimtex_view_method = "zathura"
+-- vim.g.vimtex_quickfix_mode = 0
+
 -- Normal Mode Commands --
 map("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
+map("n", "<C-s>", ":MarkdownPreview<CR>", opts)
 
 -- Vim misc defaults --
 vim.cmd("set tabstop=4")
